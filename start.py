@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# @Subj: FFRenameRegxGenerator
+# @Subj: FFRenameRegexGenerator
 # @File: start.py
 # @Date: 2022/8/16 11:23
 
