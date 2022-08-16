@@ -28,19 +28,26 @@ for v in regex_list:
 
 regex = []
 i = 0
+verify = False
 for v in regex_list:
     if v == '':
         continue
     elif v[0] == '#':
         continue
     elif v[0] == '(':
-        regex.append([])
-        regex[i].append(v)
-    elif v[0] == '$':
-        regex[i].append(v)
-        i += 1
+        if not verify:
+            regex.append([])
+            regex[i].append(v)
+            verify = True
+        else:
+            raise ValueError('不是有效的正则式列表')
     else:
-        raise ValueError('不是有效的正则式列表')
+        if verify:
+            regex[i].append(v)
+            i += 1
+            verify = False
+        else:
+            raise ValueError('不是有效的正则式列表')
 
 # 生成 FFRename Pro 的正则表达式 frc 文件
 
