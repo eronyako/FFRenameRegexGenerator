@@ -8,7 +8,7 @@
 所需文件如下：
 
 - 程序主体：start.py / FFRenameRegexGenerator.exe
-- 正则表达式列表：regex.txt
+- 正则表达式列表
 
 ### 正则表达式列表要求
 
@@ -38,7 +38,9 @@ $1$3
 
 ### 使用源码
 
-确认 regex.txt 与 FFRenameRegexGenerator.exe 在同一个目录
+拖动正则表达式列表文件到 start.py
+
+直接运行的情况，将会读取当前文件夹下的 regex.txt
 
 在当前目录运行：
 
@@ -46,11 +48,19 @@ $1$3
 python start.py
 ```
 
+#### 打包 exe 文件
+
+可使用 pyinstaller 包，用如下命令将会在 `./dist/` 目录下创建 windows 可执行程序：
+
+```shell
+pyinstaller -F --icon=icon.ico start.py
+```
+
 ### 使用封装版
 
-确认 regex.txt 与 FFRenameRegexGenerator.exe 在同一个目录
+拖动正则表达式列表文件到  FFRenameRegexGenerator.exe
 
-直接运行 FFRenameRegexGenerator.exe
+直接运行的情况，将会读取当前文件夹下的 regex.txt
 
 ## 输出
 

@@ -5,16 +5,23 @@
 # @File: start.py
 # @Date: 2022/8/16 11:23
 
+import os
+import sys
+
 # 读取正则表达式列表
 
-print('读取文件...')
 try:
-    f = open('regex.txt', 'r', encoding='UTF-8')
-except FileNotFoundError:
-    print('regex.txt 文件未找到')
-    raise FileNotFoundError('regex.txt 文件未找到')
+    file_name = sys.argv[1]
+except IndexError:
+    print('未拖动文件打开，尝试 regex.txt')
+    if os.path.isfile('regex.txt'):
+        file_name = 'regex.txt'
+    else:
+        raise FileNotFoundError('未找到 regex.txt')
+
+try:
+    f = open(file_name, 'r', encoding='UTF-8')
 except UnicodeDecodeError:
-    print('编码不正确，请使用 UTF-8 (without BOM) 编码的文件')
     raise UnicodeError('编码不正确，请使用 UTF-8 (without BOM) 编码的文件')
 else:
     regex_list = f.readlines()
