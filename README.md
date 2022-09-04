@@ -65,7 +65,7 @@ pyinstaller -F --icon=icon.ico FFRenameRegexGenerator.py
 或打包 GUI：
 
 ```shell
-pyinstaller -F --icon=icon.ico FFRenameRegexGeneratorGUI.py
+pyinstaller -w -F --icon=icon.ico FFRenameRegexGeneratorGUI.py
 ```
 
 ### 使用封装版
