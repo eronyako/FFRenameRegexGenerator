@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # @Subj: FFRenameRegexGenerator
-# @File: start.py
+# @File: FFRenameRegexGenerator.py
 # @Date: 2022/8/16 11:23
 
 import os
