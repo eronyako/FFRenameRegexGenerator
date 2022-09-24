@@ -14,7 +14,7 @@ import os
 
 
 # 定义转换函数
-def regex_convert(regex_list):
+def regex_convert(regex_list: list[str]) -> str:
     """
     此函数用于正则表达式转换
     :param regex_list: 正则表达式文件内容，str
@@ -197,4 +197,5 @@ def main():
 
 
 # 运行
-main()
+if __name__ == '__main__':
+    main()

@@ -25,10 +25,10 @@ $1$3
 - 无内容的行不处理，跳过
 - `#` 开头的行为注释行，不处理，跳过
 - `(` 开头的行视为匹配正则表达式
-- 正则表达式下一行为替换模板（请包含 '$x' 变量）
-- 请严格按照上述开头和顺序编写 regex.txt
+- 正则表达式下一有效行被视为替换模板（请包含 '$x' 变量）
+- 请严格按照上述开头和顺序编写 `regex.txt`
 
-  >`$1` 匹配正则表达式第一个括号内的内容，`$2` 匹配第二个括号，依此类推。
+  > `$1` 匹配正则表达式第一个括号内的内容，`$2` 匹配第二个括号，依此类推。
   > 
   > 本工具不会校验正则表达式，请保证编写的正则式满足你的需求。
   > 
@@ -44,7 +44,7 @@ GUI 版需要以下依赖：
 
 拖动正则表达式列表文件到 FFRenameRegexGenerator.py
 
-直接运行的情况，将会读取当前文件夹下的 regex.txt
+直接运行的情况，将会读取当前文件夹下的 `regex.txt`
 
 在当前目录运行：
 
@@ -76,10 +76,14 @@ pyinstaller -w -F --icon=icon.ico FFRenameRegexGeneratorGUI.py
 
 拖动正则表达式列表文件到  FFRenameRegexGenerator.exe
 
-直接运行的情况，将会读取当前文件夹下的 regex.txt
+直接运行的情况，将会读取当前文件夹下的 `regex.txt`
 
 或打开 GUI 文件：FFRenameRegexGeneratorGUI.exe
 
 ## 输出
 
-若正常运行后将会在当前文件夹生成 regex.frc 文件，可将此文件导入 FFRenamePro 中运行批处理命名。
+若正常运行后将会在当前文件夹生成 `regex.frc` 文件，可将此文件导入 FFRenamePro 中运行批处理命名。
+
+## 使用许可
+
+[MIT](LICENSE) © Eronyako
